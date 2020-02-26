@@ -672,19 +672,19 @@ class _Background extends StatelessWidget {
       case FeatureOverlayState.opening:
         final adjustedPercent = const Interval(0.0, 0.3, curve: Curves.easeOut)
             .transform(transitionProgress);
-        return 0.7 * adjustedPercent;
+        return 0.8 * adjustedPercent;
 
       case FeatureOverlayState.completing:
         final adjustedPercent = const Interval(0.1, 0.6, curve: Curves.easeOut)
             .transform(transitionProgress);
 
-        return 0.7 * (1 - adjustedPercent);
+        return 0.8 * (1 - adjustedPercent);
       case FeatureOverlayState.dismissing:
         final adjustedPercent = const Interval(0.2, 1.0, curve: Curves.easeOut)
             .transform(transitionProgress);
-        return 0.7 * (1 - adjustedPercent);
+        return 0.8 * (1 - adjustedPercent);
       case FeatureOverlayState.opened:
-        return 0.7;
+        return 0.8;
       case FeatureOverlayState.closed:
         return 0;
     }
